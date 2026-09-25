@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "glow-trims",
+  "version": "${version}",
+  "name": "Glow Trims",
+  "description": "Adds craftable glowing and smoothly shimmering effects to existing armor trims.",
+  "authors": ["Limit Liu"],
+  "contact": {
+    "homepage": "https://github.com/limitLiu/glow-trims/blob/main/README.md",
+    "sources": "https://github.com/limitLiu/glow-trims.git"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/glow-trims/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "net.wu_chinese.GlowTrims",
+        "adapter": "kotlin"
+      }
+    ],
+    "client": [
+      {
+        "value": "net.wu_chinese.client.GlowTrimsClient",
+        "adapter": "kotlin"
+      }
+    ],
+    "fabric-datagen": [
+      {
+        "value": "net.wu_chinese.client.GlowTrimsDataGenerator",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [
+    "glow-trims.mixins.json",
+    {
+      "config": "glow-trims.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*"
+  }
+}

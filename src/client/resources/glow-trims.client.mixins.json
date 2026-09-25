@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "net.wu_chinese.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "EquipmentLayerRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
